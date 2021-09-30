@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="AnimalSoundboard_Phase1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AnimalSoundboard_Phase1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="LightYellow">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="80"
+                   Grid.ColumnSpan="2"
+                   FontWeight="ExtraBlack"
+                   Foreground="LightCoral"> Animal Soundboard</TextBlock>
+
+        <Button Grid.Row="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="50" Click="Cow_Button_Click">🐄 Cow 🐄</Button>
+
+        <Button Grid.Row="1"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="50"
+                Click="Chicken_Button_Click">🐔 Chicken 🐔</Button>
+
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="45"
+                   Foreground="CornflowerBlue"
+                   FontWeight="ExtraBlack"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="2">Click on a button to hear an animal noise!</TextBlock>
+    </Grid>
+</Page>
