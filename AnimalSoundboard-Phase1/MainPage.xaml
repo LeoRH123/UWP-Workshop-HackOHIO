@@ -20,7 +20,7 @@ These UI elements can be styled and configured with various properties to achiev
     The actual grid lines of the grid can be visualized in the design view of your page.
     -->
     
-    <Grid x:Name="RootGrid" Background="LightYellow">
+    <Grid x:Name="RootGrid" Background="Lavender">
         
         <!--
         Here are your grids Row and Column definitions.
@@ -54,7 +54,7 @@ These UI elements can be styled and configured with various properties to achiev
                    FontSize="80"
                    Grid.ColumnSpan="2"
                    FontWeight="ExtraBlack"
-                   Foreground="LightCoral"> Animal Soundboard</TextBlock>
+                   Foreground="Indigo"> Animal Soundboard</TextBlock>
         
         <!--
         Here we have a clickable button control.
@@ -78,7 +78,7 @@ These UI elements can be styled and configured with various properties to achiev
         <TextBlock HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="45"
-                   Foreground="CornflowerBlue"
+                   Foreground="MediumPurple"
                    FontWeight="ExtraBlack"
                    Grid.ColumnSpan="2"
                    Grid.Row="2">Click on a button to hear an animal noise!</TextBlock>
