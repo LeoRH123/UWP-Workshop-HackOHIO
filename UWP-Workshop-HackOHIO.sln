@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalSoundboard-Phase1", "AnimalSoundboard-Phase1\AnimalSoundboard-Phase1.csproj", "{10E73340-4592-4934-8E09-E7EAE01A139E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalSoundboard-Part1", "AnimalSoundboard-Part1\AnimalSoundboard-Part1.csproj", "{10E73340-4592-4934-8E09-E7EAE01A139E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
