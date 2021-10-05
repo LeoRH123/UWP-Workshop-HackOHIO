@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace AnimalSoundboard_Phase1
+namespace AnimalSoundboard_Part1
 {
     
     // Here is the class that represents your MainPage.

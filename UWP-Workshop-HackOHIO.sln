@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalSoundboard-Part1", "AnimalSoundboard-Part1\AnimalSoundboard-Part1.csproj", "{10E73340-4592-4934-8E09-E7EAE01A139E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalSoundboard-Part2", "AnimalSoundboard-Part2\AnimalSoundboard-Part2.csproj", "{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -41,6 +43,30 @@ Global
 		{10E73340-4592-4934-8E09-E7EAE01A139E}.Release|x86.ActiveCfg = Release|x86
 		{10E73340-4592-4934-8E09-E7EAE01A139E}.Release|x86.Build.0 = Release|x86
 		{10E73340-4592-4934-8E09-E7EAE01A139E}.Release|x86.Deploy.0 = Release|x86
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|ARM.ActiveCfg = Debug|ARM
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|ARM.Build.0 = Debug|ARM
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|ARM.Deploy.0 = Debug|ARM
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|ARM64.Build.0 = Debug|ARM64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|x64.ActiveCfg = Debug|x64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|x64.Build.0 = Debug|x64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|x64.Deploy.0 = Debug|x64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|x86.ActiveCfg = Debug|x86
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|x86.Build.0 = Debug|x86
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Debug|x86.Deploy.0 = Debug|x86
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|ARM.ActiveCfg = Release|ARM
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|ARM.Build.0 = Release|ARM
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|ARM.Deploy.0 = Release|ARM
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|ARM64.ActiveCfg = Release|ARM64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|ARM64.Build.0 = Release|ARM64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|ARM64.Deploy.0 = Release|ARM64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|x64.ActiveCfg = Release|x64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|x64.Build.0 = Release|x64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|x64.Deploy.0 = Release|x64
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|x86.ActiveCfg = Release|x86
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|x86.Build.0 = Release|x86
+		{05EF4898-00DD-4DC7-9B39-4BDCDBFF2FD8}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
