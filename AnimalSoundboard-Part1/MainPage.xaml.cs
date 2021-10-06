@@ -27,23 +27,23 @@ namespace AnimalSoundboard_Part1
         // It reads a .wav file into a stream and sets that stream as a MediaElement source to be played.
         private async void Cow_Button_Click(object sender, RoutedEventArgs e)
         {
-            MediaElement mysong = new MediaElement();
+            MediaElement mediaElement = new MediaElement();
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync("Cow.wav");
             var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-            mysong.SetSource(stream, file.ContentType);
-            mysong.Play();
+            mediaElement.SetSource(stream, file.ContentType);
+            mediaElement.Play();
         }
 
         // Same functionality as above but for Chicken Button
         private async void Chicken_Button_Click(object sender, RoutedEventArgs e)
         {
-            MediaElement mysong = new MediaElement();
+            MediaElement mediaElement = new MediaElement();
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync("Chicken.wav");
             var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-            mysong.SetSource(stream, file.ContentType);
-            mysong.Play();
+            mediaElement.SetSource(stream, file.ContentType);
+            mediaElement.Play();
         }
     }
 

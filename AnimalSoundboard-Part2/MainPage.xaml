@@ -2,6 +2,8 @@
 This the XAML page that represents the visual UI portion of our app.   
 On this page, we add UI elements called "controls" which all sorts of UI elements, from a button to a textbox.
 These UI elements can be styled and configured with various properties to achieve the UI look and feel you desire.
+    
+!! This is the updated XAML page for part 2, and contains some updates and more in depth XAML usage !!
 -->    
 <Page
     x:Class="AnimalSoundboard_Part2.MainPage"
@@ -14,13 +16,24 @@ These UI elements can be styled and configured with various properties to achiev
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <!--
+    In the Page.Resources section, we can define properties, templates, and other content that we want to use throughout our page.
+    In this case, we're just using it to define a DataTemplate that will define how our SoundItems are displayed
+    -->
     <Page.Resources>
+        
+        <!--
+        This is a DataTemplate, which we are using to define the general appearance of our SoundItems.
+        Our GridView, which can be found farther down the page, is referencing this template using its "x:Key" value to format SoundItems
+        Essentially, this template is saying that every SoundItem will have a Border surrounding a textblock, where the PreviewText will be displayed.
+        The "x:Datatype" property tells the template what kind of data to expect for binding.
+        -->
         <DataTemplate x:Key="SoundTemplate" x:DataType="local:SoundItem">
-            <Border  Background="White" Height="150" Width="150" Margin="10,10,10,10" CornerRadius="30">
+            <Border  Background="White" Height="200" Width="200" Margin="10,10,10,10" CornerRadius="30">
                 <TextBlock FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Bind PreviewText}"/>
             </Border>
-            
         </DataTemplate>
+        
     </Page.Resources>
     
     
@@ -40,58 +53,104 @@ These UI elements can be styled and configured with various properties to achiev
         1* means the row will take up 1 portion of the available space
         3* means 3 portions
         For the setup below you get:
-        1* => 1/5
-        3* => 3/5
-        1* => 1/5
+        3* => 3/13
+        9* => 9/13
+        1* => 1/13
         -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
+            <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         
+        
         <!--
-        Here is a TextBlock control, which simply displays text.
-        An important property to note is "Grid.ColumnSpan," which says this content will span two columns in the grid its placed in.
-        Because no rows or columns are specified for this TextBlock, it sits in Row 0, Column 0.
+        This is a StackPanel control, which is another control primarily used to layout other controls.
+        StackPanels "stack" elements, where sucessive controls placed inside a stackpanel will be directly adjacent to each other, either vertically or horizontally.
+        In this example, I'm using a stackpanel to vertically stack two textboxes on top of each other, while keeping them within the same grid row and column.
+        StackPanels can also be placed in Grids, using the same Grid.Row and Grid.Column properties.
         -->
-        <TextBlock VerticalAlignment="Center"
+        <StackPanel Orientation="Vertical"
+                    Grid.ColumnSpan="3">
+
+
+            <!--
+            Here is a TextBlock control, which simply displays text.
+            An important property to note is "Grid.ColumnSpan," which says this content will span two columns in the grid its placed in.
+            Because no rows or columns are specified for this TextBlock, it sits in Row 0, Column 0.
+            -->
+            <TextBlock VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="80"
                    Grid.ColumnSpan="2"
                    FontWeight="ExtraBlack"
                    Foreground="Black"> Animal Soundboard</TextBlock>
-        
-        <!--
-        -->
 
-        <StackPanel  Grid.ColumnSpan="2" Grid.Row="1" Background="LightGray">
-            <GridView
-                x:Name="SoundView"
-                ItemsSource="{x:Bind Sounds}"
-                ItemTemplate="{StaticResource SoundTemplate}"
-                IsItemClickEnabled="True"
-                ItemClick="SoundItemClick"
-                SelectionMode="Single"
-                Padding="10,10,10,10"
-                HorizontalAlignment="Center"/>
-            
-        </StackPanel>
-            
-
-        
-
-        <!-- Another textblock in Row 2, Column 0, ColumnSpan 2-->
-        <TextBlock HorizontalAlignment="Center"
+            <!-- Another textblock in Row 2, Column 0, ColumnSpan 2-->
+            <TextBlock HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="45"
                    Foreground="DimGray"
                    FontWeight="ExtraBlack"
                    Grid.ColumnSpan="2"
                    Grid.Row="2">Click on a button to hear an animal noise!</TextBlock>
+
+        </StackPanel>
+        
+        
+
+        <!-- 
+        This our new main control for our application.
+        A GridView is a control that does a lot of the heavy lifting for you when it comes to display many items at once.
+        A GridView can "bind" to a collection of objects and display them all dynamically using a template.
+        
+        In this example, "Sounds" is the name of the collection we are binding to, which can be found in the C# file for this page.
+        "SoundTemplate" is the DataTemplate we are using, which defines how each item should be displayed. That can be found in the Page.Resources at the top of this file.
+        Both of these can be found being set in the GridViews properties, at ItemsSource and ItemTemplate
+        
+        We can also define functionality for when we click on a GridViewItem, using the ItemClick property.
+        Our function SoundItemClick() can be found in our C# file and defines the playback functionality.
+        -->
+        <GridView Grid.Row="1" Grid.ColumnSpan="3"
+            x:Name="SoundView"
+            ItemsSource="{x:Bind Sounds}"
+            ItemTemplate="{StaticResource SoundTemplate}"
+            IsItemClickEnabled="True"
+            ItemClick="SoundItemClick"
+            SelectionMode="Single"
+            Padding="10,10,10,10"
+            Margin="10,10,10,10"
+            HorizontalAlignment="Center"/>
+        
+        <!-- This stackpanel just gives us that different background color for the bottom bar-->
+        <StackPanel Background="WhiteSmoke" Grid.ColumnSpan="3" Grid.Row="2"/>
+        
+        <!-- A simple toggle switch that we created an event listener for.-->
+        <ToggleSwitch 
+            OnContent="Text to Speech Enabled" 
+            OffContent="Text to Speech Disabled" 
+            IsOn="False" 
+            Grid.Row="2" 
+            HorizontalAlignment="Center"
+            Toggled="ToggleSwitch_Toggled"/>
+        
+
+        <!-- And a monkey button that lets us dynamically add to our collection of sounds. -->
+        <Button Grid.Row="2"
+                Grid.Column="2"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Click="Monkey_Button_Click">
+                
+            More monkey!
+            
+        </Button>
+
+        
     </Grid>
 </Page>
