@@ -57,6 +57,7 @@ These UI elements can be styled and configured with various properties to achiev
         9* => 9/13
         1* => 1/13
         -->
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="9*"/>
@@ -75,6 +76,7 @@ These UI elements can be styled and configured with various properties to achiev
         In this example, I'm using a stackpanel to vertically stack two textboxes on top of each other, while keeping them within the same grid row and column.
         StackPanels can also be placed in Grids, using the same Grid.Row and Grid.Column properties.
         -->
+        
         <StackPanel Orientation="Vertical"
                     Grid.ColumnSpan="3">
 
