@@ -43,19 +43,11 @@ A GridView control that will dynamically display our sounds:
     ItemClick="SoundItemClick"
     SelectionMode="Single"/>
 ```
-
-A DataTemplate that will format our sounds (see `ItemTemplate` property on our GridView):
-```xml
-<Page.Resources>
-    <DataTemplate x:Key="SoundTemplate" x:DataType="local:SoundItem">
-        <Border  Background="White" Height="200" Width="200" Margin="10,10,10,10" CornerRadius="30">
-            <TextBlock FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Bind PreviewText}"/>
-        </Border>
-    </DataTemplate>
-</Page.Resources>        
+GridView controls have an `ItemsSource` property that allows us to send it a whole collection of items to display. Our GridView's `ItemSource` is bound to an `ObservableCollection` thats declared in our code-behind:
+```csharp
+public ObservableCollection<SoundItem> Sounds { get; set; }
 ```
-
-A SoundItem class to represent each sound (see `x:DataType` property on our DataTemplate):
+`ObservableCollections` are "observable" by the UI, that is, if the collection changes, so will the UI. Awesome! Our `ObservableCollection` is a collection of `SoundItems`:
 ```csharp
 public class SoundItem
 {
@@ -71,12 +63,17 @@ public class SoundItem
     }
 }
 ```
-An ObservableCollection of SoundItems to data bind to (see `ItemsSource` property on our GridView):
-```csharp
-public ObservableCollection<SoundItem> Sounds { get; set; }
+These `SoundItem` objects store the data that will be consumed by our GridView to display our sound items. But wait, how does it know *how* to display them? That's where we provide a `DataTemplate` to our GridViews `ItemTemplate` property:
+```xml
+<Page.Resources>
+    <DataTemplate x:Key="SoundTemplate" x:DataType="local:SoundItem">
+        <Border  Background="White" Height="200" Width="200" Margin="10,10,10,10" CornerRadius="30">
+            <TextBlock FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Bind PreviewText}"/>
+        </Border>
+    </DataTemplate>
+</Page.Resources>        
 ```
-
-A SoundItemClick function for when one of our sounds is selected (see `ItemClick` property on our GridView):
+Great, we have the look of our soundboard, but now we need some functionality. Let's add a click listener function to our GridView's `ItemClick` property:
 ```csharp
 private void SoundItemClick(object sender, ItemClickEventArgs e)
 {
@@ -92,7 +89,7 @@ private void SoundItemClick(object sender, ItemClickEventArgs e)
 }
 ```
 
-And then two functions called by our click listener (see `SoundItemClick`) to either play an audio file, or synthesize some text to speech:
+Our click listener calls two different functions depending on whether or not Text-To-Speech mode is enabled. The first plays audio from a file:
 ```csharp
 private async void PlaySoundItem(SoundItem sound)
 {
@@ -105,6 +102,7 @@ private async void PlaySoundItem(SoundItem sound)
     
 }
 ```
+While the second uses the `SpeechSynthesizer` API to play some text-to-speech audio:
 ```csharp
 private async void ReadTextToSpeech(SoundItem sound)
 {
@@ -116,6 +114,7 @@ private async void ReadTextToSpeech(SoundItem sound)
     mediaElement.Play();
 }
 ```
+Sweet! That's the core functionality of our soundboard. You can check out the rest of the code that makes it all come together on the github repository.
 
 Check out the documentation for MediaElement [here](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.MediaElement?view=winrt-22000) and the documentation for SpeechSynthesizer [here](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.SpeechSynthesis.SpeechSynthesizer?view=winrt-22000) if you want to play with these APIs a bit more.
 
