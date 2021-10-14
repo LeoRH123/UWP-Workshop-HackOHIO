@@ -2,7 +2,7 @@
 
 ## What's the deal with UWP?  
 
-Universal Windows Platform is all about developing apps that are not only for Windows, but look, feel, and interact like Windows. Any device that runs Windows can run a UWP application, and UWP allows for integration and styling that really makes your application feel like it belongs on Windows.
+Universal Windows Platform is all about developing apps that are not only for Windows, but look, feel, and interact like they *should* be on Windows. Any device that runs Windows can run a UWP application, and UWP allows for integration and styling that really makes your application feel like it belongs on Windows.
 
 One of my favorite UWP applications is [Ambie](https://github.com/jenius-apps/ambie), an open source, white-noise sound application built by one of my colleagues:  
 
@@ -16,6 +16,14 @@ Ambie is an awesome app, so lets try to imitate it!
 What if instead of soothing atmospheric noises and a level of iterative polish, Ambie had obnoxious animal noises and was built in 30 minutes?
 
 ![](MarkdownImages/AnimalSoundboard.png)
+
+As simple as this demo app is, it shows some cool things you can do right away with UWP:
+- Working with different types of media (in our case, audio, but its just as easy to get started with video, photo, etc.)
+- Speech Synthesis! Just one example of a neat API included with UWP
+- Simple, easy-to-use, and consistent UI controls, especially if you're using [WinUI](https://docs.microsoft.com/en-us/windows/apps/winui/winui2/getting-started)
+- Templated/dynamic UI that changes through user interaction. You can add as many monkey buttons as you want to this UI, keep clicking!
+
+### Resources
 
 You can clone the soundboard source code [here](https://github.com/zateutsch/UWP-Workshop-HackOHIO).
 
@@ -110,3 +118,15 @@ private async void ReadTextToSpeech(SoundItem sound)
 ```
 
 Check out the documentation for MediaElement [here](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.MediaElement?view=winrt-22000) and the documentation for SpeechSynthesizer [here](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.SpeechSynthesis.SpeechSynthesizer?view=winrt-22000) if you want to play with these APIs a bit more.
+
+## Next Steps
+
+Get out there and start building your own Windows apps!
+
+Here are some links to check out with resources on building for UWP:
+- [Official UWP Getting Started Documentation](https://docs.microsoft.com/en-us/windows/uwp/get-started/)
+- [Getting Started with UWP From Scratch](https://github.com/zateutsch/UWP-Workshop-HackOHIO/blob/master/GettingStartedWithUWP.md)
+- [Windows Development for Absolute Beginners](https://channel9.msdn.com/Series/Windows-10-development-for-absolute-beginners)
+- [Ambie Source Code](https://github.com/jenius-apps/ambie)
+
+Thanks for tuning in! Feel free to reach out on my socials linked above if you have any questions.
