@@ -21,18 +21,16 @@ As simple as this demo app is, it shows some cool things you can do right away w
 - Working with different types of media (in our case, audio, but its just as easy to get started with video, photo, etc.)
 - Speech Synthesis! Just one example of a neat API included with UWP
 - Simple, easy-to-use, and consistent UI controls, especially if you're using [WinUI](https://docs.microsoft.com/en-us/windows/apps/winui/winui2/getting-started)
-- Templated/dynamic UI that changes through user interaction. You can add as many monkey buttons as you want to this UI, keep clicking!
+- Templated/dynamic UI that changes through user interaction. You can add as many monkey buttons as you want to this UI, just keep clicking!
 
 ### Resources
 
 You can clone the soundboard source code [here](https://aka.ms/win-dev/student/osu/uwp/sample).
 
-If you're brand new to UWP, this repo has a [Getting Started With UWP Guide](https://github.com/zateutsch/UWP-Workshop-HackOHIO/blob/master/GettingStartedWithUWP.md) and in depth comments on all the source code. Go check it out and make some changes!
+If you're brand new to UWP, this repo has a [Getting Started With UWP Guide](https://aka.ms/https://aka.ms/win-dev/student/osu/uwp/sample/getting-started-uwp) and in depth comments on all the source code. Go check it out and make some changes!
 
 
 ## What makes this soundboard tick?
-
-
 
 A GridView control that will dynamically display our sounds:
 ```xml
@@ -43,7 +41,7 @@ A GridView control that will dynamically display our sounds:
     ItemClick="SoundItemClick"
     SelectionMode="Single"/>
 ```
-GridView controls have an `ItemsSource` property that allows us to send it a whole collection of items to display. Our GridView's `ItemSource` is bound to an `ObservableCollection` thats declared in our code-behind:
+GridView controls have an `ItemsSource` property that allows us to send it a whole collection of items to display. Our GridView's `ItemSource` is bound to an `ObservableCollection` that's declared in our code-behind:
 ```csharp
 public ObservableCollection<SoundItem> Sounds { get; set; }
 ```
@@ -124,7 +122,7 @@ Get out there and start building your own Windows apps!
 
 Here are some links to check out with resources on building for UWP:
 - [Official UWP Getting Started Documentation](https://docs.microsoft.com/en-us/windows/uwp/get-started/)
-- [Getting Started with UWP From Scratch](https://github.com/zateutsch/UWP-Workshop-HackOHIO/blob/master/GettingStartedWithUWP.md)
+- [Getting Started with UWP From Scratch](https://docs.microsoft.com/en-us/windows/apps/winui/winui2/getting-started)
 - [Windows Development for Absolute Beginners](https://channel9.msdn.com/Series/Windows-10-development-for-absolute-beginners)
 - [Ambie Source Code](https://github.com/jenius-apps/ambie)
 
