@@ -160,3 +160,30 @@ The new button control code should look like this:
 ```xml
 <Button Height="50" Width="150" HorizontalAlignment="Center" Click="Button_Click">Click Me!</Button>
 ```
+
+If we switch over to our **MainPage.xaml.cs** file, we'll see that a `Button_Click` function has been created for us that looks like this:
+```csharp
+private void Button_Click(object sender, RoutedEventArgs e)
+{
+
+}
+```
+Whenever our button is clicked, the code inside that function will be run.
+
+Let's change our TextBlock with our button (remember we named our TextBlock "OurTextBlock"):
+```csharp
+private void Button_Click(object sender, RoutedEventArgs e)
+{
+    this.OurTextBlock.Text += " And more text?";
+}
+```
+Now when we click our button, we'll get:
+
+![](MarkdownImages/FinalResult.png)
+
+And that's it! Your first little bit of UI interaction on UWP!
+
+If you want to take it further, here are some more beginner friendly resources to check out:
+
+- [Official UWP Getting Started Documentation](https://docs.microsoft.com/en-us/windows/uwp/get-started/)
+- [Windows Development for Absolute Beginners](https://channel9.msdn.com/Series/Windows-10-development-for-absolute-beginners)
