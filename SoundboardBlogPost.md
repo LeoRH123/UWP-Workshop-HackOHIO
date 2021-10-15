@@ -50,7 +50,7 @@ Together, these two files make up our `MainPage` class. When you run your app (b
 
 If you're brand new to UWP and XAML, I highly recommend checking out this [Getting Started With UWP](https://aka.ms/win-dev/student/osu/uwp/sample/getting-started-uwp) guide. It will walk you through more in depth how to get started building UWP applications.
 
-Additionally, you can check out the [Github repository](https://aka.ms/win-dev/student/osu/uwp/sample) for this project. It contains all of the code, split out into different parts and commneted thoroughly.
+Additionally, you can check out the [Github repository](https://aka.ms/win-dev/student/osu/uwp/sample) for this project. It contains all of the code, split out into different parts and commented thoroughly.
 
 Now, let's hop into the specifics of how this app was built!
 
