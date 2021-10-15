@@ -44,7 +44,7 @@ The UWP blank app template sets you up with all the structure you need to get st
 - **MainPage.xaml**: This is a XAML file where we will define all of our UI elements, called "controls", that will make up the visual layer of our application.
 - **MainPage.xaml.cs**: This is the C# code-behind file where we will put all the logic that lets us interact with our application.
 
-Together, these two files make up our `MainPage` class. When you run your app (by clicking the little green arrow at the top of Visual Studio), it will automatically navigate to this page!
+Together, these two files make up our `MainPage` class. When you run your app (by clicking the little green arrow at the top of Visual Studio), it will automatically navigate to this page.
 
 ### Resources
 
@@ -52,7 +52,7 @@ If you're brand new to UWP and XAML, I highly recommend checking out this [Getti
 
 Additionally, you can check out the [Github repository](https://aka.ms/win-dev/student/osu/uwp/sample) for this project. It contains all of the code, split out into different parts and commented thoroughly.
 
-Now, let's hop into the specifics of how this app was built!
+Now, let's hop into the specifics of how this app was built.
 
 ## So what makes this soundboard tick?
 
