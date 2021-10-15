@@ -27,7 +27,7 @@ As simple as this demo app is, it shows some cool things you can do right away w
 
 You can clone the soundboard source code [here](https://aka.ms/win-dev/student/osu/uwp/sample).
 
-If you're brand new to UWP, this repo has a [Getting Started With UWP Guide](https://aka.ms/win-dev/student/osu/uwp/sample/blob/master/GettingStartedWithUWP.md) and in depth comments on all the source code. Go check it out and make some changes!
+If you're brand new to UWP, this repo has a [Getting Started With UWP Guide](https://github.com/zateutsch/UWP-Workshop-HackOHIO/blob/master/GettingStartedWithUWP.md) and in depth comments on all the source code. Go check it out and make some changes!
 
 
 ## What makes this soundboard tick?
