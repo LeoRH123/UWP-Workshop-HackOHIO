@@ -9,7 +9,7 @@ One of my favorite UWP applications is [Ambie](https://github.com/jenius-apps/am
 
 ![](MarkdownImages/Ambie.png)
 
-Ambie is an awesome app, so lets try to imitate it!
+Ambie is an awesome app, so let's try to imitate it!
 
 ## UWP Animal Soundboard
 
@@ -23,12 +23,36 @@ As simple as this demo app is, it shows some cool things you can do right away w
 - Simple, easy-to-use, and consistent UI controls, especially if you're using [WinUI](https://docs.microsoft.com/en-us/windows/apps/winui/winui2/getting-started)
 - Templated/dynamic UI that changes through user interaction. You can add as many monkey buttons as you want to this UI, just keep clicking!
 
+## Getting Started
+Before we're ready to crash course through making our soundboard, we have to get a few things set up.
+
+### Setting Up Your Development Environment
+First, let's download and set up Visual Studio. You can follow a guide to get set up on Windows [here.](https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=stable) 
+
+If you're not on a Windows machine, you can download a VM with an already set up development environment [here.](https://aka.ms/win-dev/student/vm)
+
+### Creating a Blank UWP App
+Once you have Visual Studio installed, go ahead and launch it. At the start screen, select "Create a new project."
+
+This will take you to a list of templates, go ahead and search for "UWP" and then select "Blank App (Universal Windows)."
+
+Now go ahead and create your project!
+
+### What files should I be working with?
+The UWP blank app template sets you up with all the structure you need to get started coding right away. For now, we are only going to be working with two files:
+
+- **MainPage.xaml**: This is a XAML file where we will define all of our UI elements, called "controls", that will make up the visual layer of our application.
+- **MainPage.xaml.cs**: This is the C# code-behind file where we will put all the logic that lets us interact with our application.
+
+Together, these two files make up our `MainPage` class. When you run your app (by clicking the little green arrow at the top of Visual Studio), it will automatically navigate to this page!
+
 ### Resources
 
-You can clone the soundboard source code [here](https://aka.ms/win-dev/student/osu/uwp/sample).
+If you're brand new to UWP and XAML, I highly recommend checking out this [Getting Started With UWP](https://aka.ms/win-dev/student/osu/uwp/sample/getting-started-uwp) guide. It will walk you through more in depth how to get started building UWP applications.
 
-If you're brand new to UWP, this repo has a [Getting Started With UWP Guide](https://aka.ms/win-dev/student/osu/uwp/sample/getting-started-uwp) and in depth comments on all the source code. Go check it out and make some changes!
+Additionally, you can check out the [Github repository](https://aka.ms/win-dev/student/osu/uwp/sample) for this project. It contains all of the code, split out into different parts and commneted thoroughly.
 
+Now, let's hop into the specifics of how this app was built!
 
 ## What makes this soundboard tick?
 
