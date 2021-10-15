@@ -54,7 +54,7 @@ Additionally, you can check out the [Github repository](https://aka.ms/win-dev/s
 
 Now, let's hop into the specifics of how this app was built!
 
-## What makes this soundboard tick?
+## So what makes this soundboard tick?
 
 A GridView control that will dynamically display our sounds:
 ```xml
