@@ -1,10 +1,10 @@
-# Building Your First UWP Demo
+# Building Your First UWP Application
 
 ## What's the deal with UWP?  
 
 Universal Windows Platform is all about developing apps that are not only for Windows, but look, feel, and interact like they *should* be on Windows. Any device that runs Windows can run a UWP application, and UWP allows for integration and styling that really makes your application feel like it belongs on Windows.
 
-One of my favorite UWP applications is [Ambie](https://github.com/jenius-apps/ambie), an open source, white-noise sound application built by one of my colleagues:  
+One of my favorite UWP applications is [Ambie](https://github.com/jenius-apps/ambie), an open source, white-noise sound application built by one of my colleagues, [Daniel Paulino](https://twitter.com/kid_jenius):  
 
 
 ![](MarkdownImages/Ambie.png)
@@ -25,7 +25,7 @@ As simple as this demo app is, it shows some cool things you can do right away w
 
 ### Resources
 
-You can clone the soundboard source code [here](https://github.com/zateutsch/UWP-Workshop-HackOHIO).
+You can clone the soundboard source code [here](aka.ms/win-dev/student/osu/uwp/sample).
 
 If you're brand new to UWP, this repo has a [Getting Started With UWP Guide](https://github.com/zateutsch/UWP-Workshop-HackOHIO/blob/master/GettingStartedWithUWP.md) and in depth comments on all the source code. Go check it out and make some changes!
 
