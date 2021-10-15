@@ -27,7 +27,7 @@ As simple as this demo app is, it shows some cool things you can do right away w
 
 You can clone the soundboard source code [here](https://aka.ms/win-dev/student/osu/uwp/sample).
 
-If you're brand new to UWP, this repo has a [Getting Started With UWP Guide](https://aka.ms/https://aka.ms/win-dev/student/osu/uwp/sample/getting-started-uwp) and in depth comments on all the source code. Go check it out and make some changes!
+If you're brand new to UWP, this repo has a [Getting Started With UWP Guide](https://aka.ms/win-dev/student/osu/uwp/sample/getting-started-uwp) and in depth comments on all the source code. Go check it out and make some changes!
 
 
 ## What makes this soundboard tick?
@@ -122,7 +122,7 @@ Get out there and start building your own Windows apps!
 
 Here are some links to check out with resources on building for UWP:
 - [Official UWP Getting Started Documentation](https://docs.microsoft.com/en-us/windows/uwp/get-started/)
-- [Getting Started with UWP From Scratch](https://docs.microsoft.com/en-us/windows/apps/winui/winui2/getting-started)
+- [Getting Started with UWP From Scratch](https://aka.ms/win-dev/student/osu/uwp/sample/getting-started-uwp)
 - [Windows Development for Absolute Beginners](https://channel9.msdn.com/Series/Windows-10-development-for-absolute-beginners)
 - [Ambie Source Code](https://github.com/jenius-apps/ambie)
 
