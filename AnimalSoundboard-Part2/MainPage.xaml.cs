@@ -5,7 +5,7 @@ using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using System.Collections.ObjectModel;
-
+using Windows.Media.Core;
 
 namespace AnimalSoundboard_Part2
 {
@@ -73,25 +73,24 @@ namespace AnimalSoundboard_Part2
         // This function uses the SoundItem.AudioFilename property to retrieve the proper sound for whatever item was clicked. 
         private async void PlaySoundItem(SoundItem sound)
         {
-            MediaElement mediaElement = new MediaElement();
+            MediaPlayerElement mediaPlayerElement = new MediaPlayerElement();
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync(sound.AudioFilename);
-            var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-            mediaElement.SetSource(stream, file.ContentType);
-            mediaElement.Play();
-            
+            mediaPlayerElement.Source = MediaSource.CreateFromStorageFile(file);
+            mediaPlayerElement.MediaPlayer.Play();
+
         }
 
         // This uses a handy speech synthesis API to give a robot voice to our sounds!
         // Once again, this is fetching the needed playback data from our SoundItem, specifically from SoundItem.TextToSpeech
         private async void ReadTextToSpeech(SoundItem sound)
         {
-            MediaElement mediaElement = new MediaElement();
+            MediaPlayerElement mediaPlayerElement = new MediaPlayerElement();
             var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
             synth.Options.SpeakingRate = .7;
             Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync(sound.TextToSpeech);
-            mediaElement.SetSource(stream, stream.ContentType);
-            mediaElement.Play();
+            mediaPlayerElement.Source = MediaSource.CreateFromStream(stream, stream.ContentType);
+            mediaPlayerElement.MediaPlayer.Play();
         }
 
         // Here's the listener for our new toggle button.

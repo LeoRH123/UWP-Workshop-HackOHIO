@@ -3,6 +3,7 @@
 // Together, these two files are the core of any page you create for a simple UWP app.
 
 using System;
+using Windows.Media.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -27,23 +28,21 @@ namespace AnimalSoundboard_Part1
         // It reads a .wav file into a stream and sets that stream as a MediaElement source to be played.
         private async void Cow_Button_Click(object sender, RoutedEventArgs e)
         {
-            MediaElement mediaElement = new MediaElement();
+            MediaPlayerElement mediaPlayerElement = new MediaPlayerElement();
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync("Cow.wav");
-            var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-            mediaElement.SetSource(stream, file.ContentType);
-            mediaElement.Play();
+            mediaPlayerElement.Source = MediaSource.CreateFromStorageFile(file);
+            mediaPlayerElement.MediaPlayer.Play();
         }
 
         // Same functionality as above but for Chicken Button
         private async void Chicken_Button_Click(object sender, RoutedEventArgs e)
         {
-            MediaElement mediaElement = new MediaElement();
+            MediaPlayerElement mediaPlayerElement = new MediaPlayerElement();
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync("Chicken.wav");
-            var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-            mediaElement.SetSource(stream, file.ContentType);
-            mediaElement.Play();
+            mediaPlayerElement.Source = MediaSource.CreateFromStorageFile(file);
+            mediaPlayerElement.MediaPlayer.Play();
         }
     }
 
