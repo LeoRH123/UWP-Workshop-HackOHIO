@@ -9,6 +9,7 @@ namespace AnimalSoundboard_Part2
     // This is our custom SoundItem class for storing and modeling the data required to display a sound
     // and fetch the associated audio.
     // Later in the code, an ObservableCollection of these objects is used to represent our SoundBoard.
+
     public class SoundItem
     {
         public string AudioFilename { get; set; }
