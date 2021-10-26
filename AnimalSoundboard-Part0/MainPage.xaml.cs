@@ -17,16 +17,18 @@ using Windows.UI.Xaml.Navigation;
 
 namespace AnimalSoundboard_Part0
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    // Here is the class that represents your page. You can add C# code here to add functionality to your app
+    // It inherits from a common Page class so that you can focus on the specifics of your page
     public sealed partial class MainPage : Page
     {
+
+        // Constructor for your page, nothing to change here!
         public MainPage()
         {
             this.InitializeComponent();
         }
 
+        // Event listener for you button click!
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.OurTextBlock.Text += " And more text?";
