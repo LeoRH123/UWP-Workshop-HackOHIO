@@ -8,7 +8,24 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <!--
+    This is a Grid control.
+    It allows you to configure the placement of your other controls using column and row definitions.
+    The actual grid lines of the grid can be visualized in the design view of your page.
+    -->
+
     <Grid>
+
+        <!--
+        Here are some Column and Row definitions for your grid.
+        You can define as many rows or columns as you'd like and manage their relative widths and heights.
+        The star (*) notation is a helpful way to size your columns
+        1* means the column will take up 1 portion of the available space
+        For the setup below you get:
+        1* => 1/2
+        1* => 1/2
+        -->
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
