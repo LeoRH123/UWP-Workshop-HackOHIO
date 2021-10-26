@@ -35,8 +35,11 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Height="50" Width="150" HorizontalAlignment="Center" Click="Button_Click"> Click Me!</Button>
+        <!-- This is just a clickable button! Map it to a function with the "Click" property -->
 
+        <Button Height="50" Width="150" HorizontalAlignment="Center" Click="Button_Click">Click Me!</Button>
+
+        <!-- And this is a textblock - the easiest way to display text. We name our textblock using "x:name" so we can reference it in our C# code -->
         <TextBlock x:Name="OurTextBlock" 
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center" 
