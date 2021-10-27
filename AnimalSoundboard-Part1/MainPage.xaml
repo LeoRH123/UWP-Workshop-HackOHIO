@@ -20,7 +20,7 @@ These UI elements can be styled and configured with various properties to achiev
     The actual grid lines of the grid can be visualized in the design view of your page.
     -->
     
-    <Grid x:Name="RootGrid">
+    <Grid>
         
         <!--
         Here are your grids Row and Column definitions.
@@ -71,8 +71,7 @@ These UI elements can be styled and configured with various properties to achiev
                 Grid.Column="1"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
-                FontSize="50"
-                $>🐔 Chicken 🐔</Button>
+                FontSize="50">🐔 Chicken 🐔</Button>
 
         <!-- Another textblock in Row 2, Column 0, ColumnSpan 2-->
         <TextBlock HorizontalAlignment="Center"
